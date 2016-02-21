@@ -1,9 +1,4 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <stdint.h>
-#include <inttypes.h>
-
+#include "printHelpers.h"
 void print_binary(uint32_t n) {
     /* Iterate through, bit by bit. */
     uint32_t mask = 0x80000000;
