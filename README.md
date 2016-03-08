@@ -30,11 +30,11 @@ value just to make sure they work, then we'll run each one on 50000 values,
 * ./popcounts 3 1
 * ./popcounts 4 1
 * ./popcounts 5 1
-* command time -v ./popcounts 1 50000 > /dev/null 2>&1
-* command time -v ./popcounts 2 50000 > /dev/null 2>&1
-* command time -v ./popcounts 3 50000 > /dev/null 2>&1
-* command time -v ./popcounts 4 50000 > /dev/null 2>&1
-* command time -v ./popcounts 5 50000 > /dev/null 2>&1
+* command time -v ./popcounts 1 50000 > /dev/null
+* command time -v ./popcounts 2 50000 > /dev/null
+* command time -v ./popcounts 3 50000 > /dev/null
+* command time -v ./popcounts 4 50000 > /dev/null
+* command time -v ./popcounts 5 50000 > /dev/null
 
 Note that I am aware that there is an existing small bug in the code which
 causes the program to not generate all possible uint32_t values. I know where it
