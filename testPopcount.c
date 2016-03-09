@@ -48,7 +48,16 @@ int main(int argc, char* argv[]) {
 }
 
 void perform_single_popcount(int variant) {
-    uint32_t n = (uint32_t) rand();
+    // RAND_MAX is 2^31 -1 
+    // Left shift to make it fill the upper 31 bits
+    // lsb is now 0, msb is random
+    uint32_t nupper = ((uint32_t) rand()) << 1;
+    // Generate another random number in the low 31 bits
+    // msb is now 0, lsb is random
+    uint32_t nlower = (uint32_t) rand();
+    // XOR the two together to produce a random 32 bit number
+    uint32_t n = nupper ^ nlower;
+
     uint32_t popcount;
     switch (variant) {
         case 1:
